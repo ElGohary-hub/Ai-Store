@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Tajawal", "Segoe UI", Tahoma, Arial, sans-serif;
+  --font-body: "Cairo", "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #10131a;
+  color: #f4f1e8;
+}
+
+/* Perforated ticket-stub divider, the page's signature motif */
+.stub-divider {
+  position: relative;
+  border-top: 1.5px dashed rgba(244, 241, 232, 0.25);
+}
+.stub-divider::before,
+.stub-divider::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #10131a;
+}
+.stub-divider::before {
+  right: -9px;
+}
+.stub-divider::after {
+  left: -9px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rise-in {
+    animation: rise-in 0.5s ease-out both;
+  }
+}
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
