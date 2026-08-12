@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم - إضافة منتج</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f9; }
+        .admin-container { max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        input, button { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; }
+        button { background-color: #28a745; color: white; border: none; cursor: pointer; font-weight: bold; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+
+    <div class="admin-container">
+        <h2>إضافة منتج جديد</h2>
+        <form id="add-product-form">
+            <input type="text" id="product-name" placeholder="اسم المنتج (مثال: اشتراك شهر)" required>
+            <input type="text" id="product-price" placeholder="السعر" required>
+            <input type="url" id="product-image" placeholder="رابط صورة المنتج" required>
+            <button type="submit">إضافة المنتج للقاعدة</button>
+        </form>
+    </div>
+
+    <!-- استدعاء مكتبات فايربيز -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+        // استبدل هذا الجزء بالكود الخاص بك من فايربيز
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // تهيئة فايربيز وقاعدة البيانات
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // وظيفة إرسال البيانات عند الضغط على الزر
+        document.getElementById('add-product-form').addEventListener('submit', async (e) => {
+            e.preventDefault(); // لمنع إعادة تحميل الصفحة
+            
+            const name = document.getElementById('product-name').value;
+            const price = document.getElementById('product-price').value;
+            const image = document.getElementById('product-image').value;
+
+            try {
+                // إضافة البيانات لمجموعة اسمها "products"
+                const docRef = await addDoc(collection(db, "products"), {
+                    name: name,
+                    price: price,
+                    image: image,
+                    createdAt: new Date()
+                });
+                alert("تم إضافة المنتج بنجاح!");
+                document.getElementById('add-product-form').reset(); // تفريغ الخانات
+            } catch (e) {
+                console.error("Error adding document: ", e);
+                alert("حدث خطأ أثناء إضافة المنتج. تأكد من إعدادات قاعدة البيانات.");
+            }
+        });
+    </script>
+</body>
+</html>
