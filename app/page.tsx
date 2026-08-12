@@ -11,22 +11,22 @@ type Product = {
 };
 
 const PRODUCTS: Product[] = [
-  { id: "canva", name: "Canva Pro", detail: "اشتراك Canva Pro مدي الحياه والدفع بعد التفعيل. يتم التفعيل علي حسابك الشخصي وبشكل رسمي من كانفا!", price: 100, image: "/p3.png" },
-  { id: "google", name: "Google Plan", detail: "تشمل: Gemini Pro, Antigravity, Nano Banana, NotebookLM, 5TB تخزين سحابي, Google Flow 1000 Credit/M", price: 100, image: "/p4.png" },
-  { id: "capcut", name: "CapCut", detail: "التفعيل لمدة شهر فقط، تستلم حساب خاص فيك متفعل جاهز", price: 100, image: "/p10.png" },
-  { id: "coursera", name: "Coursera", detail: "باقة البلص، كل الكورسات مفتوحة، يتم ارسال حساب خاص فيك متفعل جاهز", price: 100, image: "/p6.png" },
-  { id: "office", name: "Microsoft Office 365", detail: "باقة البلص، 5 أجهزة، 100 جيجابايت ون درايف، تفعيل 12 شهر (ويندوز فقط)", price: 100, image: "/p5.png" },
-  { id: "leonardo", name: "Leonardo Ai", detail: "شهر واحد وصول كامل، 8500 رصيد، حساب خاص بك، تفعيل مباشر", price: 100, image: "/p16.png" },
-  { id: "notion", name: "Notion", detail: "باقة البلص، باقي التفاصيل كلمني", price: 100, image: "/p13.png" },
-  { id: "adobe", name: "Adobe Express", detail: "عضوية مميزة لمدة 12 شهر، لا حاجة لـ VPN أو VISA، تفعيل مباشر", price: 100, image: "/p14.png" },
-  { id: "gamma", name: "Gamma Ai", detail: "حسب الباقة، تواصل معي للتفاصيل", price: 100, image: "/p11.png" },
-  { id: "youtube", name: "YouTube", detail: "حسب المدة والباقة، تواصل معي للتفاصيل", price: 100, image: "/p12.png" },
-  { id: "chatgpt", name: "ChatGPT", detail: "حسب المدة والباقة، تواصل معي للتفاصيل", price: 100, image: "/p15.png" },
-  { id: "claude", name: "Claude", detail: "حسب الباقة، تواصل معي للتفاصيل", price: 100, image: "/p7.png" },
-  { id: "manus", name: "Manus", detail: "حسب الباقة، تواصل معي للتفاصيل", price: 100, image: "/p1.png" },
-  { id: "higgsfield", name: "Higgsfield", detail: "حسب الباقة، تواصل معي للتفاصيل", price: 100, image: "/p2.png" },
-  { id: "grok", name: "Grok", detail: "حسب الباقة، تواصل معي للتفاصيل", price: 100, image: "/p8.png" },
-  { id: "figma", name: "Figma", detail: "حسب الباقة، تواصل معي للتفاصيل", price: 100, image: "/p9.png" },
+  { id: "canva", name: "Canva Pro", detail: "اشتراك Canva Pro مدي الحياه والدفع بعد التفعيل. يتم التفعيل علي حسابك الشخصي وبشكل رسمي من كانفا!", price: 50, image: "/p3.png" },
+  { id: "google", name: "Google Plan", detail: "تشمل: Gemini Pro, Antigravity, Nano Banana, NotebookLM, 5TB تخزين سحابي, Google Flow 1000 Credit/M", price: 50, image: "/p4.png" },
+  { id: "capcut", name: "CapCut", detail: "التفعيل لمدة شهر فقط، تستلم حساب خاص فيك متفعل جاهز", price: 50, image: "/p10.png" },
+  { id: "coursera", name: "Coursera", detail: "باقة البلص، كل الكورسات مفتوحة، يتم ارسال حساب خاص فيك متفعل جاهز", price: 50, image: "/p6.png" },
+  { id: "office", name: "Microsoft Office 365", detail: "باقة البلص، 5 أجهزة، 100 جيجابايت ون درايف، تفعيل 12 شهر (ويندوز فقط)", price: 50, image: "/p5.png" },
+  { id: "leonardo", name: "Leonardo Ai", detail: "شهر واحد وصول كامل، 8500 رصيد، حساب خاص بك، تفعيل مباشر", price: 50, image: "/p16.png" },
+  { id: "notion", name: "Notion", detail: "باقة البلص، باقي التفاصيل كلمني", price: 50, image: "/p13.png" },
+  { id: "adobe", name: "Adobe Express", detail: "عضوية مميزة لمدة 12 شهر، لا حاجة لـ VPN أو VISA، تفعيل مباشر", price: 50, image: "/p14.png" },
+  { id: "gamma", name: "Gamma Ai", detail: "حسب الباقة، تواصل معي للتفاصيل", price: 50, image: "/p11.png" },
+  { id: "youtube", name: "YouTube", detail: "حسب المدة والباقة، تواصل معي للتفاصيل", price: 50, image: "/p12.png" },
+  { id: "chatgpt", name: "ChatGPT", detail: "حسب المدة والباقة، تواصل معي للتفاصيل", price: 50, image: "/p15.png" },
+  { id: "claude", name: "Claude", detail: "حسب الباقة، تواصل معي للتفاصيل", price: 50, image: "/p7.png" },
+  { id: "manus", name: "Manus", detail: "حسب الباقة، تواصل معي للتفاصيل", price: 50, image: "/p1.png" },
+  { id: "higgsfield", name: "Higgsfield", detail: "حسب الباقة، تواصل معي للتفاصيل", price: 50, image: "/p2.png" },
+  { id: "grok", name: "Grok", detail: "حسب الباقة، تواصل معي للتفاصيل", price: 50, image: "/p8.png" },
+  { id: "figma", name: "Figma", detail: "حسب الباقة، تواصل معي للتفاصيل", price: 50, image: "/p9.png" },
 ];
 
 function formatPrice(p: number | string) {
