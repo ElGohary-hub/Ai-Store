@@ -22,3 +22,4 @@ Then open http://localhost:3000.
 
 - This environment had no network access, so the project wasn't `npm install`ed or build-verified here — do that on your machine before deploying.
 - All 16 products carry the flat 100 ج.م price; edit the `PRODUCTS` array in `app/page.tsx` to change names, details, or prices per item.
+. 
